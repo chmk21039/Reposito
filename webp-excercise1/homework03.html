@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>My test page</title>
+        <link href="styles/style03.css" rel="stylesheet">
+    
+    </head>
+    <body>
+        <h1>HTMLの要素</h1>
+        <p>学生番号:5421039</p>
+        <p>このWebサイトは日本大学文理学部情報科学科 Webプログラミングの演習課題のために作成されました。</p>
+        <p>ここで記述されているHTMLの仕様はこの
+            <a href="https://html.spec.whatwg.org/multipage/#toc-semantics">https://html.spec.whatwg.org/multipage/#toc-semantics</a>
+        サイトで調べたものです。</p>
+
+        <h2>ruby要素</h2>
+        <p><ruby>ruby<rt>ルビ</rt></ruby><ruby>要<rt>よう</rt>素<rt>そ</rt></ruby>は
+            <ruby>使<rt>つか</rt></ruby>うことで
+            <ruby>文<rt>も</rt>字<rt>じ</rt></ruby>にルビをふることができます。
+        </p>
+        <p>ルビとルビをふられる文字全体をruby要素で囲み、ルビをふられる文字の後にrt要素で囲ったルビを書くことでルビをふることができます。</p>
+        <p>
+            ルビは1文字ずつふるだけでなく、熟語全体に均等にふることもできます。
+            <ruby>燐寸<rt>マッチ</rt></ruby>や<ruby>所以<rt>ゆえん</rt></ruby>、
+            <ruby>阿闍梨<rt>あじゃり</rt>餅<rt>もち</rt></ruby>というように読みが漢字
+            一文字に対応していない熟語にもルビをふることができます。
+        </p>
+        <p>他にも、二重にルビをふることもできます。表記ゆれする
+            <ruby><ruby>早<rt>そう</rt>急<rt>きゅう</rt></ruby><rt>さっきゅう</rt></ruby>
+            や<ruby><ruby>凡<rt>はん</rt>例<rt>れい</rt></ruby><rt>ぼんれい</rt></ruby>
+            などにも、このようにしてルビを二重にふることができます。
+        </p>
+        <p>これらの熟語はHTML上で以下のように書かれています。</p>
+        <article>
+            <p>「<ruby>要<rt>よう</rt>素<rt>そ</rt></ruby>」</p>
+            <p>&lt;ruby&gt;要&lt;rt&gt;よう&lt;/rt&gt;素&lt;rt&gt;そ&lt;/rt&gt;&lt;/ruby&gt;</p>
+                
+            <p>「<ruby>燐寸<rt>マッチ</rt></ruby>」</p>
+            <p>&lt;ruby&gt;燐寸&lt;rt&gt;マッチ&lt;/rt&gt;&lt;/ruby&gt;</p>
+            <p>「<ruby>所以<rt>ゆえん</rt></ruby>」</p>
+            <p>&lt;ruby&gt;所以&lt;rt&gt;ゆえん&lt;/rt&gt;&lt;/ruby&gt;</p>
+            <p>「<ruby>阿闍梨<rt>あじゃり</rt>餅<rt>もち</rt></ruby>」</p>
+            <p>&lt;ruby&gt;阿闍梨&lt;rt&gt;あじゃり&lt;/rt&gt;餅&lt;rt&gt;もち&lt;/rt&gt;&lt;/ruby&gt;</p>
+            <p>「<ruby><ruby>早<rt>そう</rt>急<rt>きゅう</rt></ruby><rt>さっきゅう</rt></ruby>」</p>
+            <p>&lt;ruby&gt;<br>&lt;ruby&gt;早&lt;rt&gt;そう&lt;/rt&gt;急&lt;rt&gt;きゅう&lt;/rt&gt;&lt;/ruby&gt;<br>&lt;rt&gt;さっきゅう&lt;/rt&gt;<br>&lt;/ruby&gt;</p>
+            <p>「<ruby><ruby>凡<rt>はん</rt>例<rt>れい</rt></ruby><rt>ぼんれい</rt></ruby>」</p>
+            <p>&lt;ruby&gt;<br>&lt;ruby&gt;凡&lt;rt&gt;はん&lt;/rt&gt;例&lt;rt&gt;れい&lt;/rt&gt;&lt;/ruby&gt;<br>&lt;rt&gt;ぼんれい&lt;/rt&gt;<br>&lt;/ruby&gt;</p>
+            
+        </article>
+        <h2>small要素</h2>
+        <p>small要素は使うことで小さい文字を書くことができます。この要素は短い実行を目的としており、サイドコメントなどに使用されます。また、以下のようにem要素やstrong要素と併用して強調しながら小さい文字を書くこともできます。</p>
+        <article>
+            <p>例</p>
+            <small>
+                <p>small要素では小さい文字を書くことができます。要素内で
+                em要素を用いて強調<em>[例)emphasized by em element]</em>したり、
+                <strong>strong要素を用いて強調</strong>
+                することもできます。</small></p>
+        </article>
+        <p>この文章はHTML上で以下のように書かれています。</p>
+        <article>
+            <p>
+                &lt;small&gt;<br>
+                &lt;p&gt;<br>small要素では小さい文字を書くことができます。要素内で
+                em要素を用いて強調&lt;em&gt;[例)emphasized by em element]&lt;/em&gt;したり、
+                &lt;strong&gt;strong要素を用いて強調&lt;/strong&gt;
+                することもできます。<br>&lt;/small&gt;<br>&lt;/p&gt;
+            </p>
+        </article>
+        <h2>br要素</h2>
+        <p>br要素は使うことでテキストの改行をすることができます。</p>
+        <p>br要素には閉じタグはなく、開きタグのみで改行を行なうことができます。</p>
+        <article>
+            <p>例</p>
+            <p>p要素による改行</p>
+            <p>改</p>
+            <p>行</p>
+            <p></p>
+            <p>br要素による改行</p>
+            <p>改<br>行</p>
+        </article>
+        <p>この文章はHTML上で以下のように書かれています。</p>
+        <article>
+            <p>p要素による改行</p>
+            <p>&lt;p&gt;改&lt;/p&gt;<br>&lt;p&gt;行&lt;/p&gt;</p>
+            <p>br要素による改行</p>
+            <p>&lt;p&gt;改&lt;br&gt;行&lt;/p&gt;</p>
+        </article>
+    </body>
+
+</html>
